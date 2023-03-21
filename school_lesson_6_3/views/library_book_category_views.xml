@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="library_book_category_view_tree" model="ir.ui.view">
+        <field name="name">library.book.category.view.tree</field>
+        <field name="model">library.book.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="complete_name"/>
+                <field name="book_count"/>                
+            </tree>
+        </field>
+    </record>
+
+    <record id="library_book_category_view_form" model="ir.ui.view">
+        <field name="name">library.book.category.view.form</field>
+        <field name="model">library.book.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" /> 
+                        <field name="parent_id" />                       
+                    </group>
+                    <button name="get_category_books"
+                            type="object"
+                            class="btn btn-primary"
+                            string="stat button"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="library_book_category_action_tree" model="ir.actions.act_window">
+        <field name="name">Category book</field>
+        <field name="res_model">library.book.category</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_library_book_category"
+        name="Category book"
+        action="library_book_category_action_tree"
+        parent="school_lesson_6_1.menu_library_root"
+        sequence="20"/>
+
+</odoo>

@@ -4,7 +4,7 @@
 
 {
     'name': 'School Lesson 6 3',
-    'version': '15.0.0.0.1',
+    'version': '15.0.1.0.1',
     'category': 'Extra Tools',
     'summary': """
         Odoo School
@@ -19,6 +19,7 @@
     'data': [
         'views/library_book_views.xml',
         'views/library_author_views.xml',
+        'views/library_book_category_views.xml',
     ],
     'support': 'support@garazd.biz',
     'application': False,
